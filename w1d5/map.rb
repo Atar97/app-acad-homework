@@ -38,12 +38,3 @@ class Map
     false
   end
 end
-
-map = Map.new
-map.set("apple", "a delicious fruit")
-map.set("peach", "a juicy delicious fruit")
-puts map.show
-puts map
-map.set("apple", "a gross fruit")
-map.delete("peach")
-puts map
