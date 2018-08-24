@@ -1,21 +1,21 @@
 class Map
 
   def initialize
-    @m = [[]]
+    @m = []
   end
 
   def set(key, value)
-    key_index = @m.key?(key)
+    key_index = key?(key)
     key_index ? @m[key_index] = [key, value] : @m << [key, value]
   end
 
   def get(key)
-    key_index = @m.key?(key)
+    key_index = key?(key)
     key_index ? @m[key_index].last : nil
   end
 
   def delete(key)
-    key_index = @m.key?(key)
+    key_index = key?(key)
     key_index ? @m.delete_at(key_index) : nil
   end
 
@@ -33,5 +33,9 @@ class Map
     end
     false
   end
-
 end
+
+map = Map.new
+map.set("apple", "a delicious fruit")
+map.set("peach", "a juicy delicious fruit")
+puts map.show
