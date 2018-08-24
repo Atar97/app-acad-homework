@@ -10,15 +10,19 @@ class Map
   end
 
   def get(key)
-
+    key_index = @m.key?(key)
+    key_index ? @m[key_index].last : nil
   end
 
   def delete(key)
-
+    key_index = @m.key?(key)
+    key_index ? @m.delete_at(key_index) : nil
   end
 
   def show
-
+    @m.inject("* ") do |acc, key_value_pair|
+      acc + " #{key_value_pair} *"
+    end
   end
 
   private
