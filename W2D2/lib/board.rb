@@ -7,11 +7,11 @@ class Board
   end
 
   def place_stones
-    @cups.map!.with_index do |_, idx|
+    @cups.map!.with_index do |cup, idx|
       if idx % 7 == 6
-        nil
+        
       else
-        [:stone, :stone, :stone, :stone]
+        cup.add_stones(4)
       end
     end
   end
@@ -52,6 +52,10 @@ class Cup
 
   def empty?
     @stones.empty?
+  end
+
+  def add_stones(num)
+    num.times {@stones << :stone}
   end
 
 end
