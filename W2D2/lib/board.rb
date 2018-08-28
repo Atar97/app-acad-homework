@@ -25,22 +25,22 @@ class Board
   def make_move(start_pos, current_player_name)
     opp_cup = current_player_name == 'Erica' ? 13 : 6
     cup = @cups[start_pos]
-    start_pos += 1
     until cup.empty?
-      if start_pos == 14
+      # byebug
+      start_pos += 1
+      if start_pos > 13
         start_pos = 0
       end
       @cups[start_pos] << cup.pop unless start_pos == opp_cup
-      start_pos += 1
     end
     render
     # byebug
-    next_turn(start_pos + 1)
+    next_turn(start_pos)
   end
 
   def next_turn(ending_cup_idx)
-    byebug
-    if @cups[ending_cup_idx].empty?
+    # byebug
+    if @cups[ending_cup_idx].count == 1
       return :switch
     elsif ending_cup_idx % 7 != 6
       ending_cup_idx
