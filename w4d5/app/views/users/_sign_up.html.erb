@@ -1,0 +1,13 @@
+<% options = sign_up_hash(type) %>
+<form class="sign-up" action="<%= options[:path] %>" method="post">
+  <%= auth_token %>
+  <label>Email:
+    <input type="text" name="user[email]" value="">
+  </label>
+  <br><br>
+  <label>Password:
+    <input type="text" name="user[password]" value="">
+  </label>
+  <br><br>
+  <input class="button" type="submit" name="" value="<%= options[:button_label] %>">
+</form>

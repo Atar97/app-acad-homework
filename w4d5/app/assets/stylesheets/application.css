@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+ font-family: Arial, serif;
+}
+
+h1 {
+  font-size: 32px;
+  padding: 5px;
+}
+
+h2 {
+  padding : 5px;
+  font-size: 26px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+li {
+  padding: 5px;
+}
+.sign-up {
+  padding: 5px;
+  font-size: 20px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+}
+
+
+.button {
+  width: 100px;
+  background-color: #bf80ff;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bf80ff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.user-header {
+  font-weight: bold;
+  color: #000080;
+  padding-right: 10px;
+  display: inherit;
+  flex-direction: column;
+}
+
+.login {
+  font-style: serif;
+  padding: 15px;
+  color: black;
+}
+
+.login:hover {
+  background-color: blue;
+}
+
+a {
+  padding: 10px;
+  margin: 10px;
+  border-top: 5px;
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+link {
+  color: grey;
+}
+
+link:hover {
+  color: black;
+}

@@ -1,0 +1,15 @@
+<form class="sign-up" action="<%= track.id ? track_url(track) : new_track_url %>" method="post">
+  <%= auth_token %>
+  <% if track.id %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+  <label>
+    <input type="text" name="track[title]" value="<%= track.title %>">
+  </label>
+  <label>Album Title</label>
+  <label>Lyrics (optional):
+    <textarea name="track[lyrics]" rows="8" cols="80"><%= track.lyrics %></textarea>
+  </label>
+
+
+</form>
