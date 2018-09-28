@@ -12,3 +12,21 @@ const isSubstring = function(string, sub) {
   }
   return false
 }
+
+const fizzBuzz = function(array) {
+  for(i = 0; i < array.length; i++) {
+
+  }
+}
+
+function secret() {
+  let thing = 'stuff'
+  if (true) {
+    let thing
+    console.log(thing)
+    thing = 'guy'
+  }
+  console.log(thing)
+}
+
+secret()
