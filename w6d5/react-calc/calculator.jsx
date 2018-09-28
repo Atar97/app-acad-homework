@@ -1,4 +1,5 @@
 import React from 'react';
+// import './main.css';
 
 class Calculator extends React.Component{
   constructor(props){
@@ -55,16 +56,29 @@ class Calculator extends React.Component{
 
   render(){
     return (
-      <div>
+      <div className="container">
         <h1>{this.state.result}</h1>
-        <br />
-        <input onChange={this.setNum1} value={this.state.num1}></input>
-        <input onChange={this.setNum2} value={this.state.num2}></input>
-        <button onClick={this.add.bind(this)}>+</button>
-        <button onClick={this.subtract.bind(this)}>-</button>
-        <button onClick={this.multiply.bind(this)}>*</button>
-        <button onClick={this.divide.bind(this)}>/</button>
-        <button onClick={this.clear.bind(this)}>CLEAR</button>
+        <div className="inputs">
+          <input size='5' onChange={this.setNum1} value={this.state.num1}></input>
+          <ul>
+            <li>
+              <button onClick={this.add.bind(this)}>+</button>
+            </li>
+            <li>
+              <button onClick={this.subtract.bind(this)}>-</button>
+            </li>
+            <li>
+              <button onClick={this.multiply.bind(this)}>*</button>
+            </li>
+            <li>
+              <button onClick={this.divide.bind(this)}>/</button>
+            </li>
+            <li>
+              <button onClick={this.clear.bind(this)} className="clear">C</button>
+            </li>
+          </ul>
+          <input size='5' onChange={this.setNum2} value={this.state.num2}></input>
+        </div>
       </div>
     );
   }
