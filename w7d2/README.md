@@ -1,5 +1,6 @@
+**Users**
 | column name        | data type           | details  |
-| ------------- |:-------------:| --------:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
+| :------------- |:-------------| :--------|
+| id      | integer | not null, primary key |
+| email      | string      | not null, indexed |
 | zebra stripes | are neat      |    $1 |
