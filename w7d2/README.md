@@ -1,4 +1,3 @@
-**Users**
 | column name        | data type           | details  |
 | :------------- |:-------------| :--------|
 | id      | integer | not null, primary key |
